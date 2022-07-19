@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteCliente" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="028ca6d9-3bea-4447-bc8a-99af4e0de868">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codC" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[Select * from Clientes C
+	inner join TipoCliente TC
+	inner join Locales L
+	inner join CuentasPorCobrar CC
+		on C.codigoTipoCliente = TC.codigoTipoCliente
+		and C.codigoLocal = L.codigoLocal
+		and C.codigoCliente = CC.codigoCliente
+			where C.codigoCliente = $P{codC} ;]]>
+	</queryString>
+	<field name="codigoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidoCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccionCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoLocal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTipoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoFavor" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoContra" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mesesPendientes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="disponibilidad" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorLocal" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorAdministracion" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoCuentaPorCobrar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroFactura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="anio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mes" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorNetoPago" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estadoPago" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="752" uuid="30c830ca-6edd-4e10-b0d3-c93a7933fed7"/>
+				<imageExpression><![CDATA["C:\\Users\\linar\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2020162\\src\\org\\javierlinares\\images\\KM1.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement x="268" y="18" width="304" height="39" forecolor="#FFFFFF" uuid="542d2732-58f2-4fcc-9306-157df6221b75"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="30"/>
+				</textElement>
+				<text><![CDATA[Reporte Cliente]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="71" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="51" width="572" height="20" forecolor="#0070C0" backcolor="#0070C0" uuid="b92b5ad9-d9aa-4fd6-8558-fe17692a5a75"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="51" width="100" height="20" forecolor="#FFFFFF" uuid="691fe4cb-2671-4474-a341-142e471fc3ac"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[codigoCliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="51" width="100" height="20" forecolor="#FFFFFF" uuid="f0537f79-e417-456b-9291-e61ab06a8737"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[nombreCliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="51" width="100" height="20" forecolor="#FFFFFF" uuid="1659422f-cb44-464e-aba0-c357cdb35c33"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[apellidoCliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="339" y="51" width="100" height="20" forecolor="#FFFFFF" uuid="cd290921-c88a-4218-9fb7-dd9aee08d852"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[telefonoCliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="51" width="100" height="20" forecolor="#FFFFFF" uuid="ea83a2d0-09c5-445b-a6f6-b3227c8a7dd9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[direccionCliente]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="85" splitType="Stretch">
+			<textField>
+				<reportElement x="472" y="0" width="100" height="20" uuid="9d2cc65e-a18d-48dd-acaf-c6b9d6458faf"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{direccionCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="0" width="100" height="20" uuid="c1106147-aa0c-46cd-92d0-5a17fe1e234b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{telefonoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="0" width="100" height="20" uuid="c72f6013-7b36-4a90-9fcb-9fa10168a743"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{apellidoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="0" width="100" height="20" uuid="aad573e5-53e8-4952-b02f-b3312c5ec387"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombreCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="c207434f-0f46-453c-9d44-5f99642e6b61"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoCliente}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="37" width="572" height="20" forecolor="#0070C0" backcolor="#0070C0" uuid="c6a37ed4-f968-4763-bc90-9e4a4c67906c"/>
+			</rectangle>
+			<textField>
+				<reportElement x="310" y="65" width="100" height="20" uuid="1b15167d-1aea-46f8-80c4-c82f6187e93d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoTipoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="439" y="65" width="100" height="20" uuid="0dd00ea3-fb6a-4d01-a8e0-df760a467bdf"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="154" y="37" width="100" height="20" forecolor="#FFFFFF" uuid="917e8f0b-9011-4ab0-996a-3f3a1b693992"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[codigoLocal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="37" width="100" height="20" forecolor="#FFFFFF" uuid="73bbcb9b-e1fa-49fa-9eaf-4d9418d3c07f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[codigoTipoCliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="37" width="112" height="20" forecolor="#FFFFFF" uuid="041c8a9f-1f77-402f-a465-ab765d8aab96"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[codigoAdministracion]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="16" y="65" width="100" height="20" uuid="701a2310-af89-4882-98f9-d978cf879744"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="37" width="100" height="20" forecolor="#FFFFFF" uuid="6b16dc0c-e919-4b3f-a4ba-102ca4378979"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[email]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="154" y="65" width="100" height="20" uuid="a3da8c80-a95d-4993-8dfc-4e61d96dfeeb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoLocal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

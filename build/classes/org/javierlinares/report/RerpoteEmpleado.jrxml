@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RerpoteEmpleado" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9556c7e3-e3dd-4f1e-83f7-f0ea1b7386d9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CodE" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from Empleados E
+	inner join Cargos C
+	inner join Departamentos D
+	inner join Horarios H
+		on E.codigoCargo = C.codigoCargo
+		and E.codigoDepartamento = D.codigoDepartamento
+		and E.codigoHorario = H.codigoHorario
+			where E.codigoEmpleado =$P{CodE};]]>
+	</queryString>
+	<field name="codigoEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidoEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="correoElectronico" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaContratacion" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sueldo" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoDepartamento" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoCargo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoHorario" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreCargo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreDepartamento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lunes" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="martes" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="miercoles" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jueves" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="viernes" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="752" uuid="fdff4dd4-a755-41a4-83fa-095e764c38f7"/>
+				<imageExpression><![CDATA["C:\\Users\\linar\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2020162\\src\\org\\javierlinares\\images\\KM1.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="93" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="111" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="20" forecolor="#0070C0" backcolor="#0070C0" uuid="2a5f1005-0ad6-4ac6-a01c-011d0b231820"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" forecolor="#FFFFFF" uuid="d602b8fe-afe2-4b17-b5b7-f5b36980c0a0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[codigoEmpleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" forecolor="#FFFFFF" uuid="d095d728-1b53-4722-9c5f-d8bdb492f6bc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[nombreEmpleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" forecolor="#FFFFFF" uuid="aeada7ad-2e82-4c93-beac-33bf8f4e01b5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[apellidoEmpleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="116" height="20" forecolor="#FFFFFF" uuid="a2947323-e252-4427-8e30-fd2673dc1c96"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[correoElectronico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="0" width="73" height="20" forecolor="#FFFFFF" uuid="d7c31455-5d2d-4192-9de1-4b318dafe371"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[telefono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="489" y="0" width="83" height="20" forecolor="#FFFFFF" uuid="d9cc2ae8-5f31-477f-b65b-877aebfa1511"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[sueldo]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="49" width="100" height="20" uuid="ce831d11-b40f-4ca9-8e80-5d23b1e845bc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="49" width="100" height="20" uuid="feebbc7d-9825-45c2-b120-a95ec35fd7c8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombreEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="49" width="100" height="20" uuid="cbe80d54-b6fe-4961-98e0-b63be0d1cf61"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{apellidoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="49" width="116" height="20" uuid="9f2f73f6-2ff7-4af8-bcc0-d1d493e9ba92"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{correoElectronico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="49" width="73" height="20" uuid="35ffa802-aa08-40cc-a397-d008e88e1abb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{telefonoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="49" width="72" height="20" uuid="34cfc048-e7d0-4631-9cc2-ec1af7781ff1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sueldo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="154" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="20" forecolor="#0070C0" backcolor="#0070C0" uuid="c5b9b49e-4daf-43fa-83c9-44f87b27b3a9"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="12" y="0" width="119" height="20" forecolor="#FFFFFF" uuid="ba6fb4ca-4f30-4f3a-8b3e-c162ed0c8ba9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[codigoDepartamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="0" width="100" height="20" forecolor="#FFFFFF" uuid="05a9f61a-f7d5-4751-8964-d4fc5a5e13e1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[codigoCargo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" forecolor="#FFFFFF" uuid="f2833f34-a14e-4466-b58b-b3a634042a47"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[codigoHorario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="0" width="116" height="20" forecolor="#FFFFFF" uuid="745e9dff-6703-45d8-8bff-8b1cd4be9071"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<text><![CDATA[codigoAdministracion]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="168" y="55" width="100" height="20" uuid="7b193c4c-8801-4045-8ea4-6c761375caa4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoCargo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="12" y="55" width="100" height="20" uuid="6ee48993-68f6-4cff-870e-5fd7496939fa"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoDepartamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="55" width="100" height="20" uuid="210937c7-ac30-40ef-8a25-7c66f8438489"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoHorario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="55" width="100" height="20" uuid="2b2daa79-3503-4703-8dfa-17838de6a2fe"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement x="340" y="0" width="232" height="20" forecolor="#0070C0" uuid="552b5ac8-61be-4e3f-8137-57abe7b176d0"/>
+				<textElement textAlignment="Right">
+					<font fontName="Berlin Sans FB Demi" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Javier Alexander Linares Chang]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

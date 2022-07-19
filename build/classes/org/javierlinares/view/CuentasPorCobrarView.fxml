@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierlinares.controller.CuentaPorCobrarController">
+   <children>
+      <ImageView fitHeight="499.0" fitWidth="688.0" layoutX="512.0" layoutY="-76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #0070C0;">
+         <children>
+            <VBox layoutY="143.0" prefHeight="157.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="201.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Nuevo" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="201.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text=" Eliminar" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="201.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Editar" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="25.0" prefWidth="201.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Reporte" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutX="16.0" prefHeight="136.0" prefWidth="169.0" style="-fx-background-color: #9ED7FF; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <Label layoutX="2.0" layoutY="3.0" text="Cuentas por Cobrar" textFill="#0070c0">
+                     <font>
+                        <Font name="Rockwell" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="105.0" fitWidth="107.0" layoutX="32.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cuentasC.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="14.0" layoutY="355.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="43.0" layoutX="146.0" layoutY="350.0" onMouseClicked="#escenarioPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/locales2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="216.0" layoutY="21.0" prefHeight="99.0" prefWidth="959.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="179.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="141.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código Cuenta por Cobrar">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Número Factura" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Código Administración" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="  Año" GridPane.columnIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="  Mes" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="  Código Cliente" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="  Valor NetoPago" GridPane.columnIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="  Estado Pago" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="  Código Local" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoCuentaPorCobrar" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNumeroFactura" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtAnio" editable="false" GridPane.columnIndex="3" />
+            <TextField fx:id="txtMes" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="txtValorNetoPago" editable="false" GridPane.columnIndex="5" />
+            <TextField fx:id="txtEstadoPago" editable="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cmbCodigoAdministracion" disable="true" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cmbCodigoCliente" disable="true" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cmbCodigoLocal" disable="true" prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblCuentaPorCobrar" layoutX="213.0" layoutY="140.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="251.0" prefWidth="973.0" stylesheets="@../resource/KinalMallCSS.css">
+        <columns>
+          <TableColumn fx:id="colCodigoCuentaPorCobrar" prefWidth="137.0" text="Cod CuentaPorPagar" />
+          <TableColumn fx:id="colNumeroFactura" prefWidth="112.0" text="Número Factura" />
+            <TableColumn fx:id="colAnio" prefWidth="125.0" text="Año" />
+            <TableColumn fx:id="colMes" prefWidth="120.0" text="Mes" />
+            <TableColumn fx:id="colValorNetoPago" prefWidth="110.0" text="Valor NetoPago" />
+            <TableColumn fx:id="colEstadoPago" prefWidth="123.0" text="Estado Pago" />
+            <TableColumn fx:id="colCodigoAdministracion" prefWidth="91.0" text="Cod Admin" />
+            <TableColumn fx:id="colCodigoCliente" prefWidth="84.0" text="Cod. Cliente" />
+            <TableColumn fx:id="colCodigoLocal" prefWidth="70.0" text="Cod. Local" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

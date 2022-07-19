@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierlinares.controller.ProgramadorController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #0070C0;">
+         <children>
+            <VBox layoutX="7.0" layoutY="200.0" prefHeight="141.0" prefWidth="187.0">
+               <children>
+                  <Button fx:id="btnProgramador" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#opciones" prefHeight="25.0" prefWidth="174.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Programador" textFill="WHITE">
+                     <font>
+                        <Font name="Rockwell" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnKinal" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#opciones" prefHeight="45.0" prefWidth="192.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Administración" textFill="WHITE">
+                     <font>
+                        <Font name="Rockwell" size="22.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+            <Pane layoutX="17.0" prefHeight="141.0" prefWidth="167.0" style="-fx-background-color: #9ED7FF; -fx-background-radius: 0 0 50 50;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <ImageView fitHeight="164.0" fitWidth="217.0" layoutX="-25.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Yo.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </children></AnchorPane>
+      <Label fx:id="lblNombres" layoutX="254.0" layoutY="124.0" prefHeight="27.0" prefWidth="207.0">
+         <font>
+            <Font name="Rockwell" size="22.0" />
+         </font></Label>
+      <Label fx:id="lblApellidos" layoutX="257.0" layoutY="214.0" prefHeight="17.0" prefWidth="152.0">
+         <font>
+            <Font name="Rockwell" size="22.0" />
+         </font></Label>
+      <Label fx:id="lblTitulo" layoutX="254.0" layoutY="299.0" prefHeight="17.0" prefWidth="158.0">
+         <font>
+            <Font name="Rockwell" size="22.0" />
+         </font></Label>
+      <ImageView fitHeight="29.0" fitWidth="38.0" layoutX="556.0" layoutY="11.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Home.png" />
+         </image></ImageView>
+      <Label layoutX="235.0" layoutY="29.0" text="Datos del Programador">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="265.0" fitWidth="330.0" layoutX="270.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

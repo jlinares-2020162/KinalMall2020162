@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdministracion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8e568075-12ac-4b15-9f94-8fcfb0b29356">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarAdministracion();]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="752" uuid="8de79b1b-a3ff-4574-9cf1-26062a7806f3"/>
+				<imageExpression><![CDATA["C:\\Users\\linar\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2020162\\src\\org\\javierlinares\\images\\KM1.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="108" splitType="Stretch">
+			<staticText>
+				<reportElement x="268" y="21" width="304" height="39" forecolor="#FFFFFF" uuid="542d2732-58f2-4fcc-9306-157df6221b75"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="30"/>
+				</textElement>
+				<text><![CDATA[Reporte Administración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="437" y="78" width="135" height="30" forecolor="#FFFFFF" uuid="5191507d-f132-4d54-a344-89683b28c2d8"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="24"/>
+				</textElement>
+				<text><![CDATA[Kinal Mall]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="23" forecolor="#0070C0" backcolor="#0070C0" uuid="32f21683-8af7-454e-96ef-1132f9d2729b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="27" y="2" width="196" height="20" forecolor="#FFFFFF" uuid="16b1bba8-c9fe-4434-9cc4-0b378279b1e3"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="18"/>
+				</textElement>
+				<text><![CDATA[Código Administración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="2" width="75" height="20" forecolor="#FFFFFF" uuid="b7e2e4b9-c19d-434c-85cb-61406ef90ce0"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="18"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="2" width="100" height="20" forecolor="#FFFFFF" uuid="213eaeaa-0999-4b8f-a7b1-d94cd87cc386"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="18"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="42" y="8" width="100" height="20" uuid="99603874-a9e0-43e6-87c0-5bf3146b271f"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="12" width="100" height="20" uuid="7ccdfd2e-32c0-4416-a508-9a63e955d601"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="389" y="12" width="183" height="20" uuid="974aff43-f6e9-4f46-baa7-87ecec422333"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="33" width="572" height="1" forecolor="#0070C0" uuid="0eef0310-6c30-47da-b4dc-dc80a32e0e91"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="85" splitType="Stretch">
+			<staticText>
+				<reportElement x="340" y="0" width="232" height="20" forecolor="#0070C0" uuid="9cdfa34d-cf6b-43fc-a2bd-9dc874a80857"/>
+				<textElement textAlignment="Right">
+					<font fontName="Berlin Sans FB Demi" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Javier Alexander Linares Chang]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
